@@ -1,0 +1,45 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+label {
+    position: relative;
+    display: flex;
+    column-gap: 20px;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+}
+
+span {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 3px;
+    position: relative;
+    transition: all .3s ease;
+}
+
+span::before {
+    content: "";
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 3px;
+    background: url("closed-eyes.png") center/cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all .3s ease;
+}
+
+input:checked + span::before {
+    background: url("eye.jpg") center/cover;
+    width: 40px;
+}
